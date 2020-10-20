@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_sj">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看中国省份和地区" />
+
+        <Button
+            android:id="@+id/button_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看全球国家和地区" />
+
+        <Button
+            android:id="@+id/button_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择" />
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/qz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="确诊" />
+
+            <RadioButton
+                android:id="@+id/zy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="治愈" />
+
+            <RadioButton
+                android:id="@+id/sw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="死亡" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</FrameLayout>

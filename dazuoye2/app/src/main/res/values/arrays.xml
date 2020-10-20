@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="province_list">
+        <item>c语言</item>
+        <item>java </item>
+        <item>php</item>
+    </string-array>
+</resources>

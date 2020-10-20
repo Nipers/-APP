@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    tools:context=".Activity_main">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="2dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dingbu"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:tabIndicatorColor="#F44336"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabSelectedTextColor="#000000"
+                    app:tabTextColor="#575353"
+                    app:tabUnboundedRipple="true">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_yw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="要闻" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_sj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="数据" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_tp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图谱" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tap_jl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="聚类" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_xz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学者" />
+                </com.google.android.material.tabs.TabLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="#FF0000"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="5dp">
+
+                <ImageButton
+                    android:id="@+id/button_search"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="#FF0000"
+                    app:srcCompat="@mipmap/icon_search" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="167dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/biaoti" />
+
+                <ImageButton
+                    android:id="@+id/button_fenlei"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF0000"
+                    app:srcCompat="@mipmap/icon_menu_sort" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/shouye_wode"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            app:cardBackgroundColor="#DCDCDC"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/button_shouye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#F5F5F5"
+                    android:clickable="false"
+                    app:srcCompat="@mipmap/icon_home_select" />
+
+                <ImageButton
+                    android:id="@+id/button_wode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#F5F5F5"
+                    android:clickable="true"
+                    app:srcCompat="@mipmap/icon_setting_unselect" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/shouye_wode"
+            android:layout_below="@id/dingbu" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
